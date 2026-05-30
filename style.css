@@ -1,11 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
 nav {
     background-color: white;
     border-bottom: 1px solid #e5e7ed;
     padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    gap: 20px;
 }
 
 nav ul li a{
@@ -21,14 +46,15 @@ nav ul li a:hover{
 .logo {
     font-size: 20px;
     font-weight: bold;
-    color: #1e2a78;
+    color: rgb(61, 29, 29);
 }
 
 .hero{
-    background-color: #7c3ead;
+    background: linear-gradient(to right, #591515, #B00000);
     color: white;
     padding: 100px 20px;
     text-align: center;
+    animation: fadeUP 1s ease-out;
 }
 
 .small-title{
@@ -47,4 +73,171 @@ nav ul li a:hover{
     font-size: 18px;
     width: 650px;
     margin: 0 auto 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.first{
+    background-color: white;
+    color: rgb(61, 29, 29);
+}
+
+.first:hover {
+    background-color: white;
+}
+
+.second{
+    border: 2px solid white;
+    color: white;
+}
+
+.second:hover {
+    background-color: white;
+    color:  rgb(61, 29, 29);
+}
+
+body {
+    background-color: #f5f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+section {
+    background-color: white;
+    width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: rgb(104, 32, 32);
+}
+
+.skills span {
+    display: inline-block;
+    background-color: rgba(255, 236, 236, 0.858);
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 14px;
+    color: rgb(61, 29, 29);
+}
+
+#service ul{
+    font-size: 18px;
+}
+
+footer{
+    text-align: center;
+    padding: 30px 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.card {
+    width: 270px;
+    border: 1px solid #ececec;
+    border-radius: 18px;
+    padding: 20px;
+    transition: box-shadow 0.3s, translate(0, -8px);
+}
+
+.card:hover{
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    transform: translate(0, -8px);
+}
+
+.card h3 {
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #262626;
+    margin-bottom: 12px;
+}
+
+.card a {
+    color: #790909;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card-image {
+    color: rgb(61, 29, 29);
+    height: 140px;
+    background-color: #ffecec;
+    border-radius: 14px;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+} 
+
+.protfolio-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+display: block;
+margin-top: 16px;
+margin-bottom: 8px;
+color: #333;
+font-size: bold;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea{
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.contact-form input[type="submit"] {
+    margin-top: 20px;
+    background-color:  rgb(61, 29, 29);
+    color: white;
+    width: 200px;
+    font-size: 16px;
+    border: none;
+    padding: 14px 24px;
+    transition: background-color 0.3s, translate(0,-4px);
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: rgb(160, 34, 34);
+    transform: translate(0,-4px);
+}
+
+@keyframes fadeUP {
+    from{
+        opacity: 0;
+        transform: translate(0, 25px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
